@@ -1,5 +1,3 @@
-
-
 # 🧊 Ice Breaker: Personalized Conversation Starters with AI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -11,7 +9,7 @@ Tired of generic conversation starters? **Ice Breaker** is an intelligent web ap
 
 This project demonstrates a real-world application of the Langchain framework, showcasing how to build powerful LLM-driven tools.
 
-***
+---
 
 ## 🚀 About The Project
 
@@ -27,7 +25,7 @@ This application uses a sophisticated pipeline to gather information about a per
 * **Structured Output:** Employs a `PydanticOutputParser` to ensure the AI's response is always in a clean, usable JSON format.
 * **Web Interface:** A user-friendly Flask application to interact with the AI.
 
-***
+---
 
 ## 🛠️ Tech Stack
 
@@ -40,7 +38,7 @@ This project is built with a modern, AI-focused technology stack:
 * **Dependency Management:** [Pipenv](https://pipenv.pypa.io/en/latest/)
 * **Testing:** [Pytest](https://docs.pytest.org/en/8.2.x/)
 
-***
+---
 
 ## ⚙️ Getting Started
 
@@ -50,5 +48,63 @@ To get a local copy up and running, follow these simple steps.
 
 You'll need to have `pipenv` installed on your system. If you don't have it, you can install it with pip:
 
-```sh
+```bash
 pip install pipenv
+```
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/emarco177/ice_breaker.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd ice_breaker
+```
+
+Set up your Environment Variables:
+
+Create a `.env` file in the root of the project. Then, copy the contents of `.env.example` into your new `.env` file and add your API keys and project path:
+
+```env
+PYTHONPATH=/path/to/your/project/ice_breaker
+OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
+PROXYCURL_API_KEY="YOUR_PROXYCURL_API_KEY"
+SERPAPI_API_KEY="YOUR_SERPAPI_API_KEY"
+```
+
+Install Dependencies:
+
+This command will create a virtual environment and install all the required packages from the Pipfile.
+
+```bash
+pipenv install
+```
+
+### ▶️ Usage
+
+Once the installation is complete, you can start the Flask server to begin generating icebreakers.
+
+Activate the virtual environment and start the Flask server:
+
+```bash
+pipenv run python app.py
+```
+
+Open your web browser and navigate to `http://127.0.0.1:5000`.
+
+Enter the name of the person you want to research and click "Submit." The application will then process the request and display a set of personalized icebreakers.
+
+### 🧪 Running Tests
+
+To ensure everything is working as expected, you can run the test suite using the following command:
+
+```bash
+pipenv run pytest .
+```
+
+---
